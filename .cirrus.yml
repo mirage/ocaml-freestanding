@@ -6,10 +6,8 @@ freebsd_task:
     OPAMYES: 1
   env:
     matrix:
-      - OCAML_VERSION: 4.08.1
-      - OCAML_VERSION: 4.09.1
-      - OCAML_VERSION: 4.10.2
-      - OCAML_VERSION: 4.11.2
+      - OCAML_VERSION: 4.10.1
+      - OCAML_VERSION: 4.11.1
       - OCAML_VERSION: 4.12.0
   pkg_install_script: pkg install -y ocaml-opam gmp gmake pkgconf bash
   opam_ocaml_cache:
@@ -26,7 +24,6 @@ freebsd_task:
     - opam pin add -n -t .
     - opam depext -yt ocaml-freestanding
     - opam install -t . --deps-only
-    - opam install solo5-bindings-hvt
   build_script: opam reinstall -t .
   test_script: 
     - MODE=hvt opam exec -- dune build --root test
