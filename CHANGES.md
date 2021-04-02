@@ -1,3 +1,9 @@
+
+## unreleased
+
+* Add compatibility with the solo5 0.7.0 package split.
+* Build a freestanding cross-compiler to use with the ocamlfind toolchain feature. This cross-compiler is able to build partial executables to link with a solo5 bindings library.
+
 ## v0.6.4 (2021-03-03)
 
 * Add support for OCaml 4.12 (#88, @kit-ty-kate)
